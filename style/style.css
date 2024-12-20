@@ -115,6 +115,55 @@ p.card-text {
   line-height: 16px;
   color: #00001E;
 }
+.card img {
+  height: auto;
+  object-fit: cover;
+}
+
+/* .card-custom {
+  height: 100%; 
+} */
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e6007e;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 15px;
+}
+.choice-badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #3700b3;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+.discover-section {
+  margin-top: 20px;
+}
+.discover-link {
+  color: #e6007e;
+  font-weight: bold;
+  text-decoration: none;
+}
+.discover-link:hover {
+  text-decoration: underline;
+}
+.card-custom img {
+  border-radius: 15px 15px 0 0;
+}
+.card-custom {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
 
 button.btn.btn-primary {
   background-color: #FD226E;
@@ -184,13 +233,29 @@ button.btn-close {
   position: absolute;
   top: 10px;
   right: 10px;
-  /* background-color: rgba(0, 0, 0, 0.5);  */
   padding: 5px;
   border-radius: 50%;
   color: white;
   font-size: 18px;
   z-index: 10;
 }
+.image-container img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.image-container {
+  position: relative;
+}
+/* .icon-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+} */
 
 .icon-overlay i {
   color: white;

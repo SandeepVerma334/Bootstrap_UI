@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewpoints with Modal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-modal {
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .custom-modal .modal-content {
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .custom-modal .btn-primary {
+            background-color: #ff007f;
+            border-color: #ff007f;
+            border-radius: 20px;
+        }
+
+        .custom-modal .btn-primary:hover {
+            background-color: #e60072;
+            border-color: #e60072;
+        }
+
+        .viewpoints-text-section a {
+            color: #FD226E;
+            text-decoration: none;
+        }
+
+        .viewpoints-text-section a:hover {
+            text-decoration: underline;
+        }
+
+        .card-body {
+            border: none;
+        }
+
+        h5.card-title {
+            font-size: 24px;
+            line-height: 24px;
+            color: #1D0387;
+            height: 24px;
+        }
+
+        p.card-text {
+            font-size: 16px;
+            line-height: 18px;
+            color: #00001E;
+            height: 54px;
+        }
+
+        .card-text p {
+            font-size: 14px;
+            line-height: 16px;
+            color: #00001E;
+        }
+
+        button.btn.btn-primary {
+            background-color: #FD226E;
+            border: none;
+            border-radius: 24px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            box-shadow: 0px 2px 8px #88888829;
+        }
+
+        button.btn-close {
+            position: absolute;
+            right: 1rem !important;
+            top: 1rem;
+            color: #fff !important;
+            z-index: 2;
+        }
+        .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+.pagination span.dot-1 {
+    width: 15px;
+    color: #FD226E;
+    font-size: 34px;
+}
+.pagination span.dot-2 {
+    width: 15px;
+    color: #F6F6F6;
+    font-size: 34px;
+}
+.pagination span.dot-3 {
+    width: 15px;
+    color: #F6F6F6;
+    font-size: 34px;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Card Grid Section -->
+        <div class="row row-cols-1 row-cols-md-1 row-cols-sm-1 row-cols-lg-1 g-4">
+            <!-- Card Example -->
+            <div class="col">
+                <div class="card h-248">
+                    <button type="close" class="btn-close" aria-label="Close"></button>
+                    <img src="images/discover_explore/Mask group.png" class="card-img-top"
+                        alt="Miradouro Castelo de Sao Jorge">
+                    <div class="card-body py-4">
+                        <h5 class="card-title">The 7 freakin’ hills</h5>
+                        <p class="card-text">These hills were São Roque, São Jorge, São Vicente, Santo André, Santa
+                            Catarina, Chagas and Sant'Ana.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue vehicula cursus.
+                            Donec eu fringilla mauris. Mauris at enim elit. </p>
+                        <p>Sed ligula mi, lobortis vel hendrerit luctus, lobortis eget lorem. Nullam ut justo et neque
+                            efficitur rutrum sit amet nec tortor.</p>
+                    </div>
+                    <button type="button" class="btn btn-primary">Wow, nice! Next</button>
+                    <!-- pagination dot  -->
+                     <div class="pagination">
+                        <span class="dot-1">-</span>
+                        <span class="dot-2">-</span>
+                        <span class="dot-3">-</span>
+                     </div>
+                </div>
+            </div>
+            <!-- Add more cards here -->
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Show modal on clicking "Explore more"
+        document.getElementById('showModal').addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default link behavior
+            const modal = new bootstrap.Modal(document.getElementById('hillsModal'));
+            modal.show();
+        });
+    </script>
+</body>
+
+</html>

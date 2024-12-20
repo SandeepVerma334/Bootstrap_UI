@@ -1,0 +1,117 @@
+body {
+  background-color: #f5f0f0;
+  font-family: 'Arial', sans-serif;
+}
+.search-section {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.category-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+.category-card:hover {
+  transform: scale(1.05);
+}
+.menu-section {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.btn-light {
+  background-color: #f8f8f8;
+}
+
+/* Dicover more page style START */
+.filter-icons img{
+    box-shadow: 1px 2px 2px #e5e5e5;
+    border-radius: 6px;
+}
+img.filter-icons {
+  width: 42px;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.viewpoints-text-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #89878714;
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+h1.h4 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+p.mb-4.viewpoints-text {  
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  width: 250px;
+  padding-left: 0px !important;
+  margin-left: 0px !important;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-section-two {
+  display: flex;  
+}
+button.btn.btn-sm.btn-outline-secondary {
+  margin: 46px 0px;
+  width: 40px;
+  border-radius: 6px;
+  height: 40px;
+  border: none;
+  box-shadow: 0px 2px 8px #88888829;
+  background-color: #fff;
+}
+.footer-section {
+  background-color: #fff;
+}
+
+/* END */
+
+/* Discover more explore page style START */
+
+.custom-modal {
+  max-width: 400px;
+  margin: auto;
+}
+
+.custom-modal .modal-content {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.custom-modal .btn-primary {
+  background-color: #ff007f;
+  border-color: #ff007f;
+  border-radius: 20px;
+}
+
+.custom-modal .btn-primary:hover {
+  background-color: #e60072;
+  border-color: #e60072;
+}
+
+/* END */
+
+
+
+
+
+/* Media Query Start */
+
+@media only screen and (min-width: 426px) {
+  p.mb-4.viewpoints-text {  
+    width: 100%;
+    display: flex;
+  }
+}

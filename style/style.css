@@ -2,37 +2,45 @@ body {
   background-color: #f5f0f0;
   font-family: 'Arial', sans-serif;
 }
+
 .search-section {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .category-card {
   background-color: #ffffff;
   border: 1px solid #ddd;
   padding: 15px;
   transition: transform 0.3s;
 }
+
 .category-card:hover {
   transform: scale(1.05);
 }
+
 .menu-section {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .btn-light {
   background-color: #f8f8f8;
 }
 
 /* Dicover more page style START */
-.filter-icons img{
-    box-shadow: 1px 2px 2px #e5e5e5;
-    border-radius: 6px;
+.filter-icons img {
+  box-shadow: 1px 2px 2px #e5e5e5;
+  border-radius: 6px;
 }
+
 img.filter-icons {
   width: 42px;
   margin-top: 0px;
   padding-top: 0px;
+  cursor: pointer;
 }
+
 .viewpoints-text-section {
   display: flex;
   justify-content: space-between;
@@ -42,12 +50,14 @@ img.filter-icons {
   border-radius: 6px;
   margin-bottom: 8px;
 }
+
 h1.h4 {
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
 }
-p.mb-4.viewpoints-text {  
+
+p.mb-4.viewpoints-text {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -55,14 +65,17 @@ p.mb-4.viewpoints-text {
   padding-left: 0px !important;
   margin-left: 0px !important;
 }
+
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .footer-section-two {
-  display: flex;  
+  display: flex;
 }
+
 button.btn.btn-sm.btn-outline-secondary {
   margin: 46px 0px;
   width: 40px;
@@ -72,45 +85,253 @@ button.btn.btn-sm.btn-outline-secondary {
   box-shadow: 0px 2px 8px #88888829;
   background-color: #fff;
 }
+
 .footer-section {
   background-color: #fff;
 }
 
 /* END */
 
-/* Discover more explore page style START */
+/* discover more explore page style START */
 
-.custom-modal {
-  max-width: 400px;
-  margin: auto;
+
+.discover-more-page h5.card-title {
+  font-size: 24px;
+  line-height: 1.9rem;
+  color: #1D0387;
+  height: 24px;
+  min-height: 6rem;
 }
 
-.custom-modal .modal-content {
-  border-radius: 20px;
-  overflow: hidden;
+p.card-text {
+  font-size: 16px;
+  line-height: 18px;
+  color: #00001E;
+  height: 54px;
 }
 
-.custom-modal .btn-primary {
-  background-color: #ff007f;
-  border-color: #ff007f;
-  border-radius: 20px;
+.card-text p {
+  font-size: 14px;
+  line-height: 16px;
+  color: #00001E;
 }
 
-.custom-modal .btn-primary:hover {
-  background-color: #e60072;
-  border-color: #e60072;
+button.btn.btn-primary {
+  background-color: #FD226E;
+  border: none;
+  border-radius: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-shadow: 0px 2px 8px #88888829;
+}
+
+button.btn-close {
+  position: absolute;
+  right: 1rem !important;
+  top: 1rem;
+  color: #fff !important;
+  z-index: 2;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.pagination span.dot-1 {
+  width: 15px;
+  color: #FD226E;
+  font-size: 34px;
+}
+
+.pagination span.dot-2 {
+  width: 15px;
+  color: #F6F6F6;
+  font-size: 34px;
+}
+
+.pagination span.dot-3 {
+  width: 15px;
+  color: #F6F6F6;
+  font-size: 34px;
+}
+
+.container-fluid.discover-explore.active-modal {
+  position: absolute;
+  top: 0;
+}
+
+.active-discover-more-page {
+  display: none;
 }
 
 /* END */
+/* Position the image container */
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.icon-overlay img {
+  width: 50px;
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+  padding: 5px;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.icon-overlay i {
+  color: white;
+}
+
+/* CSS for the choice icon overlay */
+.icon-overlay-choice img {
+  width: 100px;
+}
+
+.icon-overlay-choice {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Filters section page style */
 
 
+.filters-modal {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  /* max-width: 400px; */
+  max-width: 1320px;
+  margin: 20px auto;
+}
 
+.filters-modal .close-btn {
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  float: right;
+}
 
+.filters-modal h5 {
+  margin-top: 10px;
+}
 
+/* .filters-modal .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+} */
+.filters-modal .btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: #F6F6F6;
+  padding: 17px;
+  border-radius: 8px !important;
+}
+
+.filters-modal h6 {
+  font-size: 16px;
+  font-weight: 500;
+  color: #00001E;
+  line-height: 24px;
+}
+
+/* .filters-modal .btn {
+  flex: 1 1 calc(50% - 10px); 
+  text-align: center;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 16px !important;
+  background: #f9f9f9;
+} */
+.filters-modal .btn {
+  flex: 1 1 calc(16.66% - 10px);
+  /* Default: Show 6 buttons in a row */
+  text-align: center;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 16px !important;
+  background: #f9f9f9;
+}
+
+.filters-modal .btn:hover {
+  background: #e9e9e9;
+}
+
+/* END */
 /* Media Query Start */
 
+@media (max-width: 768px) {
+  .filters-modal .btn {
+    flex: 1 1 calc(33.33% - 10px);
+    font-size: 12px;
+    width: max-content !important;
+    max-width: max-content;
+  }
+}
+
+@media (max-width: 576px) {
+  .filters-modal .btn {
+    flex: 1 1 calc(25% - 10px);
+    font-size: 12px;
+    width: max-content !important;
+    max-width: max-content;
+  }
+}
+
+@media screen and (max-width: 426px) {
+
+  .discover-more-page h5.card-title,
+  h5.card-title {
+    font-size: 24px;
+    line-height: 1.2rem;
+    color: #1D0387;
+    height: 24px;
+    min-height: 3rem !important;
+    font-size: 12px;
+  }
+
+  .icon-overlay img {
+    width: 30px;
+  }
+
+  .icon-overlay-choice img {
+    width: 50px;
+  }
+
+  .icon-overlay-choice {
+    position: absolute;
+    bottom: 2rem;
+  }
+
+  .filters-modal .btn {
+    flex: 1 1 calc(25% - 10px);
+    font-size: 12px;
+    width: max-content !important;
+    max-width: max-content;
+  }
+}
+
 @media only screen and (min-width: 426px) {
-  p.mb-4.viewpoints-text {  
+  p.mb-4.viewpoints-text {
     width: 100%;
     display: flex;
   }

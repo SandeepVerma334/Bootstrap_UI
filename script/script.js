@@ -1,44 +1,33 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleSwitch = document.getElementById("mapViewToggle");
-  
-    toggleSwitch.addEventListener("change", () => {
-      if (toggleSwitch.checked) {
-        alert("Map View Enabled!");
-      } else {
-        alert("Map View Disabled!");
-      }
-    });
-  });
-  
-    // Add interactivity to category cards (optional)
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-      card.addEventListener('click', () => {
-        alert(`You selected: ${card.textContent.trim()}`);
-      });
-    });
-  
-// script/script.js
+// Discover more explore page
 document.querySelector('.viewpoints-text-section').addEventListener('click', function () {
-  console.log("clicked");
-  alert("clicked");
-  // Fetch external content
-  fetch('home_page/discover_explore.html') // Adjust the path to your external page
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok');
-          }
-          return response.text();
-      })
-      .then(data => {
-          // Insert the fetched content into the modal
-          document.getElementById('modalContent').innerHTML = data;
-
-          // Show the modal
-          const modal = new bootstrap.Modal(document.getElementById('contentModal'));
-          modal.show();
-      })
-      .catch(error => {
-          console.error('Error loading the page:', error);
-      });
+  const modal = document.querySelector('.discover-explore');
+  const discover_more_page = document.querySelector('.discover-more-page');
+  modal.style.display = 'block';
+  modal.classList.add('active-modal');
+  discover_more_page.classList.add('active-discover-more-page');
 });
+document.querySelector('.btn-close').addEventListener('click', function () {
+  const modal = document.querySelector('.discover-explore');
+  const discover_more_page = document.querySelector('.discover-more-page');
+  modal.style.display = 'none';
+  modal.classList.remove('active-modal');
+  discover_more_page.classList.remove('active-discover-more-page');
+});
+
+// filters section page popup modal show and hide
+
+document.querySelector('.filter-icons').addEventListener('click', function (event) {
+  const filters_modal = document.querySelector('.filters-modal');
+  const discover_more_page = document.querySelector('.discover-more-page');
+  filters_modal.style.display = 'block';
+  filters_modal.classList.add('active-filters_modal');
+  discover_more_page.classList.add('active-discover-more-page');
+});
+document.querySelector('.close-btn').addEventListener('click', function () {
+  const filters_modal = document.querySelector('.filters-modal');
+  const discover_more_page = document.querySelector('.discover-more-page');
+  filters_modal.style.display = 'none';
+  filters_modal.classList.remove('active-filters_modal');
+  discover_more_page.classList.remove('active-discover-more-page');
+});
+// END

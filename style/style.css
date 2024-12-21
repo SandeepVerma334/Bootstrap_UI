@@ -533,14 +533,7 @@ div#portuguese-jargon img {
   width: 48px;
   height: 48px;
 }
-.category-card p {
-  font-size: 12px;
-  max-width: max-content;
-  min-width: 5rem;
-}
-.category-card img {
-  width: 20px;
-}
+
 .useful-jargon h2 {
   color: #1D0387;
   font-size: 14px;
@@ -631,6 +624,14 @@ div#portuguese-jargon img {
     transition: all .4s ease-in-out;
     position: relative;
 } */
+.category-card p {
+  font-size: 12px;
+  max-width: max-content;
+  min-width: 5rem;
+}
+.category-card img {
+  width: 20px;
+}
 }
 
 

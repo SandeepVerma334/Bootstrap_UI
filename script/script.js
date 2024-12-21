@@ -16,18 +16,29 @@ document.querySelector('.btn-close').addEventListener('click', function () {
 
 // filters section page popup modal show and hide
 
-document.querySelector('.filter-icons').addEventListener('click', function (event) {
-  const filters_modal = document.querySelector('.filters-modal');
-  const discover_more_page = document.querySelector('.discover-more-page');
-  filters_modal.style.display = 'block';
-  filters_modal.classList.add('active-filters_modal');
-  discover_more_page.classList.add('active-discover-more-page');
-});
-document.querySelector('.close-btn').addEventListener('click', function () {
-  const filters_modal = document.querySelector('.filters-modal');
-  const discover_more_page = document.querySelector('.discover-more-page');
-  filters_modal.style.display = 'none';
-  filters_modal.classList.remove('active-filters_modal');
-  discover_more_page.classList.remove('active-discover-more-page');
-});
+// document.querySelector('.filter-icons').addEventListener('click', function (event) {
+//   const filters_modal = document.querySelector('.filters-modal');
+//   const discover_more_page = document.querySelector('.discover-more-page');
+//   filters_modal.style.display = 'block';
+//   filters_modal.classList.add('active-filters_modal');
+//   discover_more_page.classList.add('active-discover-more-page');
+// });
+// document.querySelector('.close-btn').addEventListener('click', function () {
+//   const filters_modal = document.querySelector('.filters-modal');
+//   const discover_more_page = document.querySelector('.discover-more-page');
+//   filters_modal.style.display = 'none';
+//   filters_modal.classList.remove('active-filters_modal');
+//   discover_more_page.classList.remove('active-discover-more-page');
+// });
 // END
+
+// on click viewpoint in home page section then call discover more page
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.discover-more-home').addEventListener('click', function (event) {
+    alert('hello');
+    window.location.href = 'home_page/discover_more.html';
+  });
+});
+

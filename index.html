@@ -3,16 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Card Design</title>
+  <title>Home Page</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
+  <style>
+    /* .discover-more-page {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.active-discover-more-page {
+  display: flex;
+}
+
+iframe {
+  width: 80%;
+  height: 80%;
+  border: none;
+} */
+
+  </style>
 </head>
 <body>
-  <div class="container py-5">
+  <div class="container py-5" id="home_page">
     <!-- Header Section -->
     <div class="text-start mb-4">
       <h1 class="fs-4 fw-bold">Hey there, here's Toby’s list</h1>
@@ -35,45 +60,52 @@
 
  <!-- Categories Section -->
  <div class="row text-center mb-4 g-3">
-  <div class="col-6 col-md-3">
+  <div class="col-3 col-md-3">
     <div class="category-card rounded d-flex flex-column justify-content-center align-items-center">
-      <i class="bi bi-heart-fill text-danger fs-3"></i>
+      <!-- <i class="bi bi-heart text-danger fs-3"></i> -->
+       <img src="home_page/images/icons/heart.png" alt="heart">
       <p class="mt-2 mb-0">For you</p>
     </div>
   </div>
-  <div class="col-6 col-md-3">
+  <div class="col-3 col-md-3">
     <div class="category-card rounded d-flex flex-column justify-content-center align-items-center">
-      <i class="bi bi-star-fill text-warning fs-3"></i>
+      <!-- <i class="bi bi-star-fill text-warning fs-3"></i> -->
+      <img src="home_page/images/icons/star.png" alt="heart">
       <p class="mt-2 mb-0">Toby’s choice</p>
     </div>
   </div>
-  <div class="col-6 col-md-3">
+  <div class="col-3 col-md-3">
     <div class="category-card rounded d-flex flex-column justify-content-center align-items-center">
-      <i class="bi bi-lightbulb-fill text-primary fs-3"></i>
+      <!-- <i class="bi bi-lightbulb-fill text-primary fs-3"></i> -->
+      <img src="home_page/images/icons/Lisbon.png" alt="heart">
       <p class="mt-2 mb-0">Original from Lisbon</p>
     </div>
   </div>
-  <div class="col-6 col-md-3">
+  <div class="col-3 col-md-3">
     <div class="category-card rounded d-flex flex-column justify-content-center align-items-center">
-      <i class="bi bi-geo-alt-fill text-success fs-3"></i>
+      <!-- <i class="bi bi-geo-alt-fill text-success fs-3"></i> -->
+      <img src="home_page/images/icons/building.png" alt="heart">
       <p class="mt-2 mb-0">Get to know</p>
     </div>
   </div>
 </div>
-
+ <!-- Subtitle Section -->
+ <div class="viewpoints-text-section">
+  <p class="mb-4 viewpoints-text">Lisbon is known for its charming old neighborhoods, old-fashioned trams, nice food, and rich history. <a href="#" style="color:#FD226E;"> Explore more</a></p>
+  <span>
+      <img src="home_page/images/icons/start_emoji.png">
+  </span>
+</div>
 <!-- Toggle Section -->
-<div class="menu-section d-flex justify-content-between align-items-center p-3 rounded-3 flex-wrap">
-  <div class="form-check form-switch d-flex align-items-center">
-    <input class="form-check-input me-2" type="checkbox" id="mapViewToggle">
-    <label class="form-check-label small text-nowrap" for="mapViewToggle">Map view</label>
+<div class="d-flex justify-content-between align-items-center mb-3 mt-5 toggler-section">
+  <div class="form-check form-switch">
+      <label class="form-check-label" for="mapViewToggle">Map view</label>
+      <input class="form-check-input" type="checkbox" id="mapViewToggle">
   </div>
-  <div class="d-flex">
-    <button class="btn btn-light rounded-circle p-2 me-2 d-flex align-items-center justify-content-center">
-      <i class="bi bi-sliders"></i>
-    </button>
-    <button class="btn btn-light rounded-circle p-2 d-flex align-items-center justify-content-center">
-     <i class="fa-solid fa-up-down"></i>
-    </button>
+  <div class="filter-sorting">
+      <img class="filter-icons" src="home_page/images/icons/filter.png">
+      <!-- bi bi-sliders -->
+      <img src="home_page/images/icons/order.png">
   </div>
 </div>
 
@@ -86,142 +118,269 @@
 
 
 
-<!-- Explore More Section -->
-<div class="discover-section mt-4 d-flex justify-content-between align-items-center">
-  <h5 class="mb-0">Neighbourhoods</h5>
-  <a href="#" class="discover-link">Discover more</a>
-</div>
-
-
- <!-- Cards Section -->
- <div class="row row-cols-1 row-cols-md-2 g-4">
-  <!-- Card 1 -->
-  <div class="col">
-    <div class="card card-custom">
-      <div class="image-container">
-        <img 
-          src="img/image1.png" 
-          class="card-img-top img-fluid" 
-          alt="Miradouro Castelo">
+ <!-- Card Grid Section -->
+ <div class="Viewpoints-section container">
+  <!-- Section 1 -->
+  <div class="row">
+      <div class="col-12 viewpoints-heading text-center">
+          <h2>Viewpoints</h2>
+          <h2 onclick="loadDoc()" class="discover-more-home">Discover more</h2>
       </div>
-      <div class="card-body">
-        <h6 class="card-title">Enjoy Miradouro Castelo de São Jorge, a historical one</h6>
-        <p class="text-muted mb-0">Free</p>
-      </div>
-    </div>
   </div>
-  
-  <!-- Card 2 -->
-  <div class="col">
-    <div class="card card-custom">
-      <div class="image-container">
-        <img 
-          src="img/image2.png" 
-          class="card-img-top img-fluid" 
-          alt="Miradouro da Graça">
+  <div class="row row-cols-2 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+          <div class="card h-248">
+              <div class="image-container">
+                  <img src="home_page/images/image.png" class="card-img-top" alt="Miradouro Castelo de Sao Jorge">
+                  <span class="icon-overlay">
+                      <img src="home_page/images/icons/Categories.png" alt="">
+                  </span>
+                  <span class="icon-overlay-choice">
+                      <img src="home_page/images/icons/Top.png" alt="">
+                  </span>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Enjoy Miradouro Castelo de São Jorge, a historical one</h5>
+                  <p class="card-text">Free</p>
+              </div>
+          </div>
       </div>
-      <div class="card-body">
-        <h6 class="card-title">Check out Miradouro da Graça, the best in town</h6>
-        <p class="text-muted mb-0">Free</p>
+
+      <!-- Card 2 -->
+      <div class="col">
+          <div class="card h-248">
+              <div class="image-container">
+                  <img src="home_page/images/image6.png" class="card-img-top" alt="Miradouro da Graca">
+                  <span class="icon-overlay">
+                      <img src="home_page/images/icons/Categories.png" alt="">
+                  </span>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Check out Miradouro da Graça, the best in town</h5>
+                  <p class="card-text">Free</p>
+              </div>
+          </div>
       </div>
-    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="row">
+      <div class="col-12 text-center Neighbourhoods-headings">
+          <h2>Neighbourhoods</h2>
+          <h2>Discover more</h2>
+      </div>
+  </div>
+  <div class="row row-cols-2 g-4">
+      <!-- Card 3 -->
+      <div class="col">
+          <div class="card h-248">
+              <div class="image-container">
+                  <img src="home_page/images/home4.png" class="card-img-top" alt="Miradouro da Torre de Belem">
+                  <span class="icon-overlay">
+                      <img src="home_page/images/icons/Categories.png" alt="">
+                  </span>
+                  <span class="icon-overlay-choice">
+                    <img src="home_page/images/icons/Top.png" alt="">
+                </span>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Enjoy the sea view at Miradouro da Torre de Belém</h5>
+                  <p class="card-text">Free</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col">
+          <div class="card h-248">
+              <div class="image-container">
+                  <img src="home_page/images/home3.png" class="card-img-top" alt="Sao Pedro de Alcantara">
+                  <span class="icon-overlay">
+                      <img src="home_page/images/icons/Categories.png" alt="">
+                  </span>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Relax at Miradouro de São Pedro de Alcântara at the heart of Lisbon</h5>
+                  <p class="card-text">Free</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="row">
+      <div class="col-12 text-center Parks-headings">
+          <h2>Parks & Gardens</h2>
+          <h2>Discover more</h2>
+      </div>
+  </div>
+  <div class="row row-cols-2 g-4">
+      <!-- Card 5 -->
+      <div class="col">
+          <div class="card h-248">
+              <div class="image-container">
+                  <img src="home_page/images/home2.png" class="card-img-top" alt="Miradouro do Penha de Franca">
+                  <span class="icon-overlay">
+                      <img src="home_page/images/icons/Categories.png" alt="">
+                  </span>
+                  <span class="icon-overlay-choice">
+                    <img src="home_page/images/icons/Top.png" alt="">
+                </span>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">Take a peak at Lisbon at Miradouro da Penha de França</h5>
+                  <p class="card-text">Free</p>
+              </div>
+          </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col">
+          <div class="card h-248">
+              <div class="image-container">
+                  <img src="home_page/images/home1.png" class="card-img-top" alt="Santa Catarina">
+                  <span class="icon-overlay">
+                      <img src="home_page/images/icons/Categories.png" alt="">
+                  </span>
+              </div>
+              <div class="card-body">
+                  <h5 class="card-title">See the other side of the river at Miradouro de Santa Catarina</h5>
+                  <p class="card-text">Free</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Section 4 -->
+
+</div>
+</div>
+
+
+
+
+<!-- Footer Start -->
+
+<div class="container-fluid footer-section py-4">
+  <div class="row row-cols-1 row-cols-md-1 row-cols-sm-1 row-cols-lg-1 g-4">
+      <div class="col">
+          <div class="footer container h-248">
+              <div class="footer-section-one">
+                  <img src="home_page/images/icons/SuperGuide.png" class="card-img-top"
+                      alt="Miradouro Castelo de Sao Jorge">
+              </div>
+              <div class="footer-section-two">
+                  <img src="home_page/images/icons/logo--instagram.png" class="card-img-top"
+                      alt="Miradouro Castelo de Sao Jorge">
+                  <img src="home_page/images/icons/tripadvisor-svgrepo-com 1.png" class="card-img-top"
+                      alt="Miradouro Castelo de Sao Jorge">
+                  <img src="home_page/images/icons/logo.png" style="width: 100%;" class="card-img-top"
+                      alt="Miradouro Castelo de Sao Jorge">
+              </div>
+          </div>
+      </div>
   </div>
 </div>
 
-<!-- Explore More Section -->
-<div class="discover-section mt-4 d-flex justify-content-between align-items-center">
-  <h5 class="mb-0">Neighbourhoods</h5>
-  <a href="#" class="discover-link">Discover more</a>
-</div>
+<!-- END -->
 
-<!-- More Cards Section -->
-<div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
-  <!-- Card 3 -->
-  <div class="col">
-    <div class="card card-custom">
-      <div class="image-container">
-        <img 
-          src="img/image1.png" 
-          class="card-img-top img-fluid" 
-          alt="Miradouro Castelo">
+<!-- Footer Start -->
+
+<!-- <div class="container-fluid footer-section py-4">
+  <div class="row row-cols-1 row-cols-md-1 row-cols-sm-1 row-cols-lg-1 g-4">
+      <div class="col">
+          <div class="footer container h-248">
+              <div class="footer-section-one">
+                  <img src="home_page/images/icons/SuperGuide.png" class="card-img-top"
+                      alt="Miradouro Castelo de Sao Jorge">
+              </div>
+              <div class="footer-section-two">
+                  <img src="home_page/images/icons/logo--instagram.png" class="card-img-top"
+                      alt="Miradouro Castelo de Sao Jorge">
+                  <img src="home_page/images/icons/tripadvisor-svgrepo-com 1.png" class="card-img-top"
+                      alt="Miradouro Castelo de Sao Jorge">
+                  <img src="home_page/images/icons/logo.png" style="width: 100%;" class="card-img-top"
+                      alt="Miradouro Castelo de Sao Jorge">
+              </div>
+          </div>
       </div>
-      <div class="card-body">
-        <h6 class="card-title">Enjoy Miradouro Castelo de São Jorge, a historical one</h6>
-        <p class="text-muted mb-0">Free</p>
-      </div>
-    </div>
   </div>
-  
-  <!-- Card 4 -->
-  <div class="col">
-    <div class="card card-custom">
-      <div class="image-container">
-        <img 
-          src="img/image2.png" 
-          class="card-img-top img-fluid" 
-          alt="Miradouro da Graça">
-      </div>
-      <div class="card-body">
-        <h6 class="card-title">Check out Miradouro da Graça, the best in town</h6>
-        <p class="text-muted mb-0">Free</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+</div> -->
+<!-- Footer END -->
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      // Replace the current page content with the loaded content
+      document.body.innerHTML = this.responseText;
 
-<!-- Explore More Section -->
-<div class="discover-section mt-4 d-flex justify-content-between align-items-center">
-  <h5 class="mb-0">Neighbourhoods</h5>
-  <a href="#" class="discover-link">Discover more</a>
-</div>
+      // Add event listener to the back button
+      const backButton = document.querySelector('.back_btn_discover_page');
+      if (backButton) {
+        backButton.addEventListener('click', function () {
+          loadIndex(); // Function to load the index.html content
+        });
+      }
 
-<!-- More Cards Section -->
-<div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
-  <!-- Card 3 -->
-  <div class="col">
-    <div class="card card-custom">
-      <div class="image-container">
-        <img 
-          src="img/image1.png" 
-          class="card-img-top img-fluid" 
-          alt="Miradouro Castelo">
-      </div>
-      <div class="card-body">
-        <h6 class="card-title">Enjoy Miradouro Castelo de São Jorge, a historical one</h6>
-        <p class="text-muted mb-0">Free</p>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Card 4 -->
-  <div class="col">
-    <div class="card card-custom">
-      <div class="image-container">
-        <img 
-          src="img/image2.png" 
-          class="card-img-top img-fluid" 
-          alt="Miradouro da Graça">
-      </div>
-      <div class="card-body">
-        <h6 class="card-title">Check out Miradouro da Graça, the best in town</h6>
-        <p class="text-muted mb-0">Free</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
+      // Add event listener to the filter button
+      const filterButton = document.querySelector('.filter-icons');
+      const modal = document.querySelector('.filters-modal');
+      const discover_more_page = document.querySelector('.discover-more-page');
+    //   const filters_close_btn = document.querySelector('.close-btn');
+      if (filterButton && modal) {
+        filterButton.addEventListener('click', function () {
+            alert('hello');
+          modal.style.display = 'block'; // Show the modal
+          modal.classList.add('active-filters_modal');
+          discover_more_page.classList.add('active-discover-more-page');
+        });
 
-<!-- Explore More Section -->
-<div class="discover-section mt-4 d-flex justify-content-between align-items-center">
-  <h5 class="mb-0">Neighbourhoods</h5>
-  <a href="#" class="discover-link">Discover more</a>
-</div>
+        // Add event listener to the close button inside the modal
+        const closeButton = modal.querySelector('.close-btn');
+        if (closeButton) {
+          closeButton.addEventListener('click', function () {
+            modal.style.display = 'none'; // Hide the modal
+            discover_more_page.classList.remove('active-discover-more-page');
+          modal.classList.remove('active-filters_modal');
+          });
+        }
+      }
+    }
+  };
+  xhttp.open("GET", "home_page/discover_more.html", true);
+  xhttp.send();
+}
 
+// Function to load the index.html content
+function loadIndex() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      // Replace the current page content with the index content
+      document.body.innerHTML = this.responseText;
+
+      // Re-attach the event listener for the "Discover More" button
+      const discoverButton = document.querySelector('.discover-more-home');
+      if (discoverButton) {
+        discoverButton.addEventListener('click', loadDoc);
+      }
+    }
+  };
+  xhttp.open("GET", "index.html", true);
+  xhttp.send();
+}
 
 
+
+
+</script>
+
+<script src="script/script.js"></script>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../script/script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

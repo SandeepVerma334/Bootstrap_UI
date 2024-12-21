@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viewpoints with Modal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../style/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="container-fluid" id="explore-page">
+        <!-- Card Grid Section -->
+        <div class="row row-cols-1 row-cols-md-1 row-cols-sm-1 row-cols-lg-1 g-4">
+            <!-- Card Example -->
+            <div class="col">
+                <div class="card">
+                    <button type="close" class="btn-close" aria-label="Close"></button>
+                    <img src="images/discover_explore/Mask group.png" class="card-img-top"
+                        alt="Miradouro Castelo de Sao Jorge">
+                    <div class="card-body py-4">
+                        <h5 class="card-title">The 7 freakin’ hills</h5>
+                        <p class="card-text">These hills were São Roque, São Jorge, São Vicente, Santo André, Santa
+                            Catarina, Chagas and Sant'Ana.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur congue vehicula cursus.
+                            Donec eu fringilla mauris. Mauris at enim elit. </p>
+                        <p>Sed ligula mi, lobortis vel hendrerit luctus, lobortis eget lorem. Nullam ut justo et neque
+                            efficitur rutrum sit amet nec tortor.</p>
+                        <p class="view-more">View More</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body py-4">
+                        <h5 class="card-title">Trendy neighborhoods </h5>
+                    </div>
+                    <img src="images/Lisbon.png" class="card-img-top" alt="Miradouro Castelo de Sao Jorge">
+                </div>
+                <!--  Add more cards here -->
+            </div>
+        </div>
+
+        <!-- Section -->
+
+        <div class="row row-cols-1 row-cols-md-1 row-cols-sm-1 row-cols-lg-1 g-4">
+            <!-- Card Example -->
+            <section class="mt-5" style="background-color: #fff;">
+                <div class="card">
+                    <div class="card-body py-4">
+                        <ul class="list-group trendy-neighborhoods">
+                            <li class="list-group-item">
+                                <div class="number">1</div>
+                                <div>
+                                    <strong>Principe Real:</strong> Filled with trendy restaurants, grand mansions, tiny antique shops, Moorish kiosks, and miniature gardens.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="number">2</div>
+                                <div>
+                                    <strong>Bairro Alto:</strong> Oldest and most traditional neighborhood, with a great nightlife and festive spirit.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="number">3</div>
+                                <div>
+                                    <strong>Chiado:</strong> Cultural and commercial district, known for its shopping, historic landmarks, and numerous theatres and museums.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="number">4</div>
+                                <div>
+                                    <strong>Baixa:</strong> Known for its amazing big squares, neoclassical buildings, and commercial streets.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="number">5</div>
+                                <div>
+                                    <strong>Alfama:</strong> Delightful maze of narrow cobbled streets and traditional houses.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+<!-- Did you know section -->
+<div class="swiper-container">
+    
+    <h2>Did you know?</h2>
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="mb-4 viewpoints-text">
+                <p class="main-txt">Local curiosity</p>
+                <p style="color: rgba(0, 0, 30, 1);font-weight: 400;">Some local curiosities about Lisbon go here 
+                    <span style="color:#FD226E;">Explore more</span> </p>
+                </div>
+            <span>
+                <img src="images/icons/emoji.png" alt="emoji">
+            </span>
+        </div>
+        <div class="swiper-slide">
+            <div class="mb-4 viewpoints-text">
+                <p class="main-txt">Local curiosity</p>
+                <p style="color: rgba(0, 0, 30, 1);font-weight: 400;">Some local curiosities about Lisbon go here 
+                    <span style="color:#FD226E;">Explore more</span> </p>
+                </div>
+            <span>
+                <img src="images/icons/emoji.png" alt="emoji">
+            </span>
+        </div>
+        <div class="swiper-slide">
+            <div class="mb-4 viewpoints-text">
+                <p class="main-txt">Local curiosity</p>
+                <p style="color: rgba(0, 0, 30, 1);font-weight: 400;">Some local curiosities about Lisbon go here 
+                    <span style="color:#FD226E;">Explore more</span> </p>
+                </div>
+            <span>
+                <img src="images/icons/emoji.png" alt="emoji">
+            </span>
+        </div>
+    </div>
+    <!-- Optional Navigation -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- Useful Portuguese Jargon Section -->
+<section class="useful-jargon mt-5" style="background-color: #F9F9F9; padding: 20px;">
+    <h2 style="font-weight: bold; margin-bottom: 15px;">Useful Portuguese Jargon</h2>
+    <div id="portuguese-jargon">
+    <ul style="list-style-type: none; padding: 0;">
+        <li style="margin-bottom: 10px;"><strong style="color:#00001E" style="color:#00001E">Hello, all good?</strong> <span style="color: #00001E;">Olá, tudo bem?</span></li>
+        <li style="margin-bottom: 10px;"><strong style="color:#00001E">See you tomorrow</strong> <span style="color: #00001E;">Até amanhã</span></li>
+        <li style="margin-bottom: 10px;"><strong style="color:#00001E">How much?</strong> <span style="color: #00001E;">Quanto custa?</span></li>
+        <li style="margin-bottom: 10px;"><strong style="color:#00001E">The bill please</strong> <span style="color: #00001E;">A conta por favor</span></li>
+        <li style="margin-bottom: 10px;"><strong style="color:#00001E">What is your recommendation?</strong> <span style="color: #00001E;">Qual é a sua recomendação?</span></li>
+        <li style="margin-bottom: 10px;"><strong style="color:#00001E">Where's the bathroom?</strong> <span style="color: #00001E;">Onde é a casa de banho?</span></li>
+    </ul>
+    <img src="images/icons/language.png">
+</div>
+</section>
+
+</div>
+
+        </div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 225000000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+});
+
+</script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

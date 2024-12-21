@@ -16,10 +16,14 @@ body {
 .category-card {
   background-color: #ffffff;
   border: 1px solid #ddd;
-  padding: 15px;
+  padding: 0px;
   transition: transform 0.3s;
   min-height: 9rem;
   transition: all .4s ease-in-out;
+  /* max-width: 9rem;
+  min-width: 6rem;
+  max-height: 9rem;
+  min-height: 6rem; */
 }
 
 .category-card:hover {
@@ -529,6 +533,14 @@ div#portuguese-jargon img {
   width: 48px;
   height: 48px;
 }
+.category-card p {
+  font-size: 12px;
+  max-width: max-content;
+  min-width: 5rem;
+}
+.category-card img {
+  width: 20px;
+}
 .useful-jargon h2 {
   color: #1D0387;
   font-size: 14px;
@@ -580,6 +592,18 @@ div#portuguese-jargon img {
 }
 
 @media (max-width: 576px) {
+  .category-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 0px;
+    transition: transform 0.3s;
+    min-height: 9rem;
+    transition: all .4s ease-in-out;
+    max-width: 9rem;
+    min-width: 6rem;
+    max-height: 9rem;
+    min-height: 6rem;
+  }
   .filters-modal .btn {
     flex: 1 1 calc(25% - 10px);
     font-size: 12px;
@@ -597,6 +621,16 @@ div#portuguese-jargon img {
     /* margin-bottom: 0rem; */
     font-size: 19px !important;
   }
+  /* .category-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    transition: transform 0.3s;
+    min-height: 5rem;
+    min-width: 5rem;
+    transition: all .4s ease-in-out;
+    position: relative;
+} */
 }
 
 
@@ -638,4 +672,32 @@ div#portuguese-jargon img {
     width: 100%;
     display: flex;
   }
+}
+@media only screen and (max-width: 376px) {
+  .category-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 0px;
+    transition: transform 0.3s;
+    min-height: 9rem;
+    transition: all .4s ease-in-out;
+    max-width: 6rem !important;
+    min-width: 5rem !important;
+    max-height: 7rem !important;
+    min-height: 5rem !important;
+}
+}
+@media only screen and (max-width: 321px) {
+  .category-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 0px;
+    transition: transform 0.3s;
+    min-height: 9rem;
+    transition: all .4s ease-in-out;
+    max-width: 6rem !important;
+    min-width: 5rem !important;
+    max-height: 7rem !important;
+    min-height: 5rem !important;
+}
 }
